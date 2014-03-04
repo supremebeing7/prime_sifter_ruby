@@ -1,12 +1,11 @@
 def sifter(number)
-  digits = (2..(number-1)).to_a
-  p = 2
+  digits = (2...number).to_a
   digits.each do |num|
-    digits.reject! {|digit| digit % num == 0} 
-    digits.unshift(num)
+    if num < Math.sqrt(number)
+      digits.reject! {|digit| digit % num == 0 && digit != num } 
+    end
   end
-  # puts "Primes: #{primes}"
-  digits.sort!
   puts "Digits: #{digits}"
+  digits
 end
-sifter(50)
+sifter(1000)
