@@ -1,1 +1,2 @@
-puts 5.methods
+Prime.each(50) do |prime|
+  p prime => 
