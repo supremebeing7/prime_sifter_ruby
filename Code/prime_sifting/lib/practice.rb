@@ -1,5 +1,1 @@
-array = []
-array << ("hello")
-puts array
-array << ("bye")
-puts array
+puts 5.methods
